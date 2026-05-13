@@ -1,6 +1,5 @@
 import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../../database/db";
-import { Tuition } from "./Tuition";
 
 export interface CarI {
   id?: number;
@@ -74,9 +73,3 @@ Car.init(
     timestamps: false,
   }
 );
-
-// One Car → Many Tuitions
-Car.hasMany(Tuition, {
-  foreignKey: "car_id",
-  sourceKey: "id",
-});

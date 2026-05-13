@@ -1,6 +1,5 @@
 import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../../database/db";
-import { Car } from "./Car";
 
 export interface TuitionI {
   id?: number;
@@ -72,9 +71,3 @@ Tuition.init(
     timestamps: false,
   }
 );
-
-// Many Tuitions → One Car
-Tuition.belongsTo(Car, {
-  foreignKey: "car_id",
-  targetKey: "id",
-});
