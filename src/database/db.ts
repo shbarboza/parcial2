@@ -21,14 +21,14 @@ const dbConfigurations: Record<string, DatabaseConfig> = {
     database: process.env.MYSQL_NAME || "test",
     port: parseInt(process.env.MYSQL_PORT || "3306")
   },
-  postgres: {
-    dialect: "postgres",
-    host: process.env.POSTGRES_HOST || "localhost",
-    username: process.env.POSTGRES_USER || "postgres",
-    password: process.env.POSTGRES_PASSWORD || "",
-    database: process.env.POSTGRES_NAME || "test",
-    port: parseInt(process.env.POSTGRES_PORT || "5432")
-  },
+  // postgres: {
+  //   dialect: "postgres",
+  //   host: process.env.POSTGRES_HOST || "localhost",
+  //   username: process.env.POSTGRES_USER || "postgres",
+  //   password: process.env.POSTGRES_PASSWORD || "",
+  //   database: process.env.POSTGRES_NAME || "test",
+  //   port: parseInt(process.env.POSTGRES_PORT || "5432")
+  // },
 };
 
 const selectedEngine = process.env.DB_ENGINE || "mysql";

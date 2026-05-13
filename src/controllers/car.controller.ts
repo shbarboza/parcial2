@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { Tuition, TuitionI } from "../models/business/Tuition";
-import { Car } from "../models/business/Car";
+import { Tuition} from "../models/business/Tuition";
+import { Car, CarI } from "../models/business/Car";
 
 export class CarController {
   public async getAllCars(req: Request, res: Response) {

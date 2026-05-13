@@ -26,7 +26,10 @@ Tuition.init(
       type: DataTypes.DATEONLY,
       allowNull: false,
       validate: {
-        isDate: { msg: "date_matricula must be a valid date" },
+        isDate: {
+          msg: "date_matricula must be a valid date",
+          args: true
+        },
         notEmpty: { msg: "date_matricula is required" },
       },
     },
